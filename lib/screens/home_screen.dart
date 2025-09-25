@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:taskmanagment_app/core/appcolor.dart';
+import 'package:taskmanagment_app/core/textmanager.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,20 +18,44 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: 45,
-                    height: 45,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: ClipRRect(
-                      child: Image.asset(
-                          'assets/images/jakob-owens-lkMJcGDZLVs-unsplash.jpg'),
-                    ),
+                  Row(
+                    children: [
+                      Container(
+                        width: 45,
+                        height: 45,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: ClipRRect(
+                          child: Image.asset(
+                              'assets/images/jakob-owens-lkMJcGDZLVs-unsplash.jpg'),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      const Text(
+                        Textmanager.wlcmomsg,
+                        style: TextStyle(
+                          color: Appcolor.kblackColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 26,
+                        ),
+                      )
+                    ],
+                  ),
+                  const Icon(
+                    Icons.more_vert,
+                    color: Appcolor.kYellewLight,
+                    size: 40,
                   ),
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 24,
+              ),
             ],
           ),
         ),
