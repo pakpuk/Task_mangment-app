@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taskmanagment_app/core/appcolor.dart';
 import 'package:taskmanagment_app/core/textmanager.dart';
+import 'package:taskmanagment_app/widgets/gopremuiim_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -56,6 +57,14 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 24,
               ),
+              const GopremuiimWidget(),
+              const SizedBox(
+                height: 12,
+              ),
+              const Text(
+                Textmanager.taskText,
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              )
             ],
           ),
         ),

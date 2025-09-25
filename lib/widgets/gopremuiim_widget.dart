@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:taskmanagment_app/core/appcolor.dart';
 import 'package:taskmanagment_app/core/textmanager.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class GopremuiimWidget extends StatelessWidget {
+  const GopremuiimWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -65,10 +65,9 @@ class MyWidget extends StatelessWidget {
             bottom: 15,
             right: 15,
             child: Container(
-            
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-              ),
+                  borderRadius: BorderRadius.circular(12),
+                  color: Appcolor.kBlueaccent),
               child: Center(
                 child: Icon(
                   Icons.arrow_forward,
