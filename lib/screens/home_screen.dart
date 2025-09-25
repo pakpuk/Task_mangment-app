@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       const SizedBox(
-                        width: 8,
+                        width: 12,
                       ),
                       const Text(
                         Textmanager.wlcmomsg,
