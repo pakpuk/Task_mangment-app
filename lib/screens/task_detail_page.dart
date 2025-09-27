@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taskmanagment_app/core/appcolor.dart';
 import 'package:taskmanagment_app/models/Task_model.dart';
+import 'package:taskmanagment_app/widgets/date_picker.dart';
 import 'package:taskmanagment_app/widgets/sliverr_appbar_widget.dart';
 
 class TaskDetailScreen extends StatelessWidget {
@@ -29,6 +30,7 @@ class TaskDetailScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [DatePicker()],
                 ),
               ),
             ),
