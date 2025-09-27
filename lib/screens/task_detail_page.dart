@@ -16,6 +16,22 @@ class TaskDetailScreen extends StatelessWidget {
           SliverrAppbarWidget(
             title: '${task.title}',
             left: task.left!,
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              decoration: const BoxDecoration(
+                  color: Appcolor.kwhite,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  )),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                ),
+              ),
+            ),
           )
         ],
       )),
