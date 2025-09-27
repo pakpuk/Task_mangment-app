@@ -4,4 +4,5 @@ class Textmanager {
   static const String gopremuim = 'Go Premuim';
   static const String premuimdisc =
       ' Get unlimited access\n to all our features!';
+  static const String taskText = 'Tasks';
 }

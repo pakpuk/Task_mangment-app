@@ -13,12 +13,11 @@ class Buttonwidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height / 14,
-      width: double.maxFinite,
-      decoration: BoxDecoration(
-          color: Backgroundcolor, borderRadius: BorderRadius.circular(40)),
-      child: Center(
-          child: Text(text, style: TextStyle(color: TextColor, fontSize: 24))),
-    );
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        decoration: BoxDecoration(
+            color: Backgroundcolor, borderRadius: BorderRadius.circular(12)),
+        child: Center(
+          child: Text(text, style: TextStyle(color: TextColor)),
+        ));
   }
 }

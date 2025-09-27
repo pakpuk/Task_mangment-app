@@ -20,34 +20,36 @@ class TaskModel {
       this.title,
       this.islast = false});
 
-  static List<TaskModel> generateTask = [
-    TaskModel(
-      iconData: Icons.person_rounded,
-      title: 'personal',
-      backgroundcolor: Appcolor.kYellewLight,
-      btncolor: Appcolor.kkYellew,
-      iconcolor: Appcolor.kYellewDark,
-      done: 3,
-      left: 1,
-    ),
-    TaskModel(
-      iconData: Icons.cases_rounded,
-      title: 'work',
-      backgroundcolor: Appcolor.kRedLight,
-      btncolor: Appcolor.kRed,
-      iconcolor: Appcolor.kRedDark,
-      done: 0,
-      left: 0,
-    ),
-    TaskModel(
-      iconData: Icons.person_outline,
-      title: 'personal',
-      backgroundcolor: Appcolor.kBlueLight,
-      btncolor: Appcolor.kBlue,
-      iconcolor: Appcolor.kBlueDark,
-      done: 0,
-      left: 0,
-    ),
-    TaskModel(islast: true)
-  ];
+  static List<TaskModel> generateTask() {
+    return [
+      TaskModel(
+        iconData: Icons.person_rounded,
+        title: 'personal',
+        backgroundcolor: Appcolor.kYellewLight,
+        btncolor: Appcolor.kkYellew,
+        iconcolor: Appcolor.kYellewDark,
+        done: 3,
+        left: 1,
+      ),
+      TaskModel(
+        iconData: Icons.cases_rounded,
+        title: 'work',
+        backgroundcolor: Appcolor.kRedLight,
+        btncolor: Appcolor.kRed,
+        iconcolor: Appcolor.kRedDark,
+        done: 0,
+        left: 0,
+      ),
+      TaskModel(
+        iconData: Icons.person_outline,
+        title: 'personal',
+        backgroundcolor: Appcolor.kBlueLight,
+        btncolor: Appcolor.kBlue,
+        iconcolor: Appcolor.kBlueDark,
+        done: 0,
+        left: 0,
+      ),
+      TaskModel(islast: true),
+    ];
+  }
 }
