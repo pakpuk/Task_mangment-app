@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taskmanagment_app/core/appcolor.dart';
 import 'package:taskmanagment_app/core/textmanager.dart';
+import 'package:taskmanagment_app/widgets/bottom_nav_barr.dart';
 import 'package:taskmanagment_app/widgets/gopremuiim_widget.dart';
 import 'package:taskmanagment_app/widgets/tasklist_widget.dart';
 
@@ -72,6 +73,19 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(child: TasklistWidget())
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: const BottomNavBarrWidget(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Appcolor.kblackColor,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
+          color: Appcolor.kwhite,
+          size: 34,
         ),
       ),
     );
