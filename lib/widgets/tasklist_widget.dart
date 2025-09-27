@@ -17,6 +17,7 @@ class TasklistWidget extends StatelessWidget {
               ? BuiladdtaskWidget()
               : BuildtaskWidget(
                   task: taskList[index],
+                  ontap: () {},
                 )),
     );
   }
