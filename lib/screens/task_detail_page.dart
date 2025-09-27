@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:taskmanagment_app/core/appcolor.dart';
+import 'package:taskmanagment_app/models/Task_model.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class TaskDetailScreen extends StatelessWidget {
+  const TaskDetailScreen(List<TaskModel> taskList, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Appcolor.kblackColor,
       body: SafeArea(
-          child: Column(
-        children: [],
+          child: CustomScrollView(
+        slivers: [],
       )),
     );
   }

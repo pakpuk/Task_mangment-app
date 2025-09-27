@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taskmanagment_app/models/Task_model.dart';
+import 'package:taskmanagment_app/screens/task_detail_page.dart';
 import 'package:taskmanagment_app/widgets/builaddtask_widget.dart';
 import 'package:taskmanagment_app/widgets/buildtask_widget.dart';
 
@@ -17,7 +18,10 @@ class TasklistWidget extends StatelessWidget {
               ? BuiladdtaskWidget()
               : BuildtaskWidget(
                   task: taskList[index],
-                  ontap: () {},
+                  ontap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TaskDetailScreen(taskList)));
+                  },
                 )),
     );
   }
