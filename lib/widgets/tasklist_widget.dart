@@ -20,7 +20,9 @@ class TasklistWidget extends StatelessWidget {
                   task: taskList[index],
                   ontap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => TaskDetailScreen(taskList)));
+                        builder: (context) => TaskDetailScreen(
+                              task: taskList[index],
+                            )));
                   },
                 )),
     );
