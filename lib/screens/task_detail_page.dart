@@ -3,6 +3,7 @@ import 'package:taskmanagment_app/core/appcolor.dart';
 import 'package:taskmanagment_app/models/Task_model.dart';
 import 'package:taskmanagment_app/widgets/date_picker.dart';
 import 'package:taskmanagment_app/widgets/sliverr_appbar_widget.dart';
+import 'package:taskmanagment_app/widgets/task_timeline_widget.dart';
 import 'package:taskmanagment_app/widgets/task_title_widget.dart';
 
 class TaskDetailScreen extends StatelessWidget {
@@ -56,7 +57,9 @@ class TaskDetailScreen extends StatelessWidget {
                   ),
                 )
               : SliverList(delegate: SliverChildBuilderDelegate((_, index) {
-                  detailedList[index];
+                  TaskTimelineWidget(
+                    detail: detailedList[index],
+                  );
                 }))
         ],
       )),
