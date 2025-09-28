@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskmanagment_app/core/appcolor.dart';
 
 class DatePicker extends StatefulWidget {
   const DatePicker({super.key});
@@ -22,20 +23,47 @@ class _DatePickerState extends State<DatePicker> {
         topRight: Radius.circular(30),
       )),
       child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-          itemBuilder: (context,index){
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: (){},
+              onTap: () {
+                setState(() {
+                  isSelected == index;
+                });
+              },
               child: Container(
                 child: Column(
-                  children: [],
+                  children: [
+                    Text(
+                      "${weekList[index]}",
+                      style: TextStyle(
+                        color: isSelected == index
+                            ? Appcolor.kblackColor
+                            : Appcolor.kgrey,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "${dayList[index]}",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: isSelected == index
+                            ? Appcolor.kblackColor
+                            : Appcolor.kgrey,
+                      ),
+                    )
+                  ],
                 ),
               ),
-            )
+            );
           },
-          separatorBuilder:(_ ,SizedBox){
-
-          } ,
+          separatorBuilder: (_, index) {
+            return const SizedBox(
+              width: 5,
+            );
+          },
           itemCount: weekList.length),
     );
   }
