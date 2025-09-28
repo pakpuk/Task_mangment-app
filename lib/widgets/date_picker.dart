@@ -32,6 +32,12 @@ class _DatePickerState extends State<DatePicker> {
                 });
               },
               child: Container(
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.symmetric(horizontal: 4),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: isSelected == index ? Appcolor.kgrey : null,
+                ),
                 child: Column(
                   children: [
                     Text(
