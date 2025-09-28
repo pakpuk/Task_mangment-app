@@ -57,7 +57,7 @@ class TaskDetailScreen extends StatelessWidget {
                   ),
                 )
               : SliverList(delegate: SliverChildBuilderDelegate((_, index) {
-                  TaskTimelineWidget(
+                  return TaskTimelineWidget(
                     detail: detailedList[index],
                   );
                 }))
