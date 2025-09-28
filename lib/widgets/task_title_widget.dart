@@ -5,9 +5,37 @@ class TaskTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [],
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Tasks",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
+              ),
+              color: Colors.grey.withOpacity(0.1),
+            ),
+            child: Row(
+              children: [
+                Text(
+                  "Timeline",
+                  style: TextStyle(
+                      color: Colors.grey[700], fontWeight: FontWeight.w500),
+                ),
+                const Icon(Icons.keyboard_arrow_down_outlined)
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
