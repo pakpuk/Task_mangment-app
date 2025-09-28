@@ -42,23 +42,39 @@ class TaskModel {
             }
           ]),
       TaskModel(
-        iconData: Icons.cases_rounded,
-        title: 'work',
-        backgroundcolor: Appcolor.kRedLight,
-        btncolor: Appcolor.kRed,
-        iconcolor: Appcolor.kRedDark,
-        done: 0,
-        left: 0,
-      ),
+          iconData: Icons.cases_rounded,
+          title: 'work',
+          backgroundcolor: Appcolor.kRedLight,
+          btncolor: Appcolor.kRed,
+          iconcolor: Appcolor.kRedDark,
+          done: 0,
+          left: 0,
+          description: [
+            {
+              'time': '10:00 am',
+              'title': 'shot on Dribble',
+              'slot': '10:00 am - 12:00 am',
+              'tlcolor': Appcolor.kBlueDark,
+              'bgcolor': Appcolor.kBlueLight
+            }
+          ]),
       TaskModel(
-        iconData: Icons.person_outline,
-        title: 'personal',
-        backgroundcolor: Appcolor.kBlueLight,
-        btncolor: Appcolor.kBlue,
-        iconcolor: Appcolor.kBlueDark,
-        done: 0,
-        left: 0,
-      ),
+          iconData: Icons.person_outline,
+          title: 'personal',
+          backgroundcolor: Appcolor.kBlueLight,
+          btncolor: Appcolor.kBlue,
+          iconcolor: Appcolor.kBlueDark,
+          done: 0,
+          left: 0,
+          description: [
+            {
+              'time': '10:00 pm',
+              'title': 'shot on Dribble',
+              'slot': '10:00 am - 12:00 pm',
+              'tlcolor': Appcolor.kYellewDark,
+              'bgcolor': Appcolor.kYellewLight
+            }
+          ]),
       TaskModel(islast: true),
     ];
   }

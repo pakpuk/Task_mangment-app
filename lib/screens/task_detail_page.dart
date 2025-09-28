@@ -10,6 +10,7 @@ class TaskDetailScreen extends StatelessWidget {
   final TaskModel task;
   @override
   Widget build(BuildContext context) {
+    final detailedList = task.description;
     return Scaffold(
       backgroundColor: Appcolor.kblackColor,
       body: SafeArea(
@@ -38,7 +39,25 @@ class TaskDetailScreen extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
+          detailedList == null
+              ? SliverFillRemaining(
+                  child: Container(
+                    color: Appcolor.kwhite,
+                    child: const Center(
+                      child: Text(
+                        "There is no task today!",
+                        style: TextStyle(
+                          color: Appcolor.kgrey,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              : SliverList(delegate: SliverChildBuilderDelegate((_, index) {
+                  detailedList[index];
+                }))
         ],
       )),
     );
