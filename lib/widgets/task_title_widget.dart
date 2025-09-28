@@ -12,7 +12,7 @@ class TaskTitleWidget extends StatelessWidget {
           Text(
             "Tasks",
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
           ),

@@ -6,7 +6,7 @@ import 'package:taskmanagment_app/widgets/sliverr_appbar_widget.dart';
 import 'package:taskmanagment_app/widgets/task_title_widget.dart';
 
 class TaskDetailScreen extends StatelessWidget {
-  TaskDetailScreen({super.key, required this.task});
+  const TaskDetailScreen({super.key, required this.task});
   final TaskModel task;
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,10 @@ class TaskDetailScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [DatePicker(), TaskTitleWidget()],
+                  children: [
+                    DatePicker(),
+                    TaskTitleWidget(),
+                  ],
                 ),
               ),
             ),
